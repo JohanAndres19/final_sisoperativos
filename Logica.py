@@ -13,8 +13,7 @@ class CPU:
         
     def Ejecutar(self):
         self.command_srt.start()
-        self.command_round.start()
-        self.command_fifo.start() 
+
 #----------------------------------------------
 class Proceso:
     def __init__(self):
@@ -46,19 +45,49 @@ class Command(QThread):
     def __init__(self,cola):
         super().__init__()
         self.cola=cola
+    
+    def Ejecutar(self):
+        pass
 
 class ShortRafaga(Command):
     def __init__(self, cola):
         super().__init__(cola)
-
+    
+    def Ordenar(self):
+        aux=self.cola.lista[0].Get_rafaga()
+        pos=-1
+        for i in range(1,len(self.cola.lista)):
+            if  self.cola.lista[i].Get_rafaga() <aux:
+                aux=self.cola.lista[i].Get_rafaga()
+                pos=i
+        if pos!=-1:
+            elemento=self.cola.lista.pop(pos)
+            self.cola.lista.insert(0,elemento)
+    
+    def Ejecutar(self):
+        while len(self.cola.lista):
+            self.Ordenar()
+            proceso=self.cola.lista.pop(0)
+            while proceso.Get_rafaga()>0 and self.isbloqueado():
+                pass
+    
     def run(self):
-        print("hilo command short")
-        time.sleep(1)
+        self.Ejecutar()
 
 class Round_robin(Command):
     def __init__(self, cola):
         super().__init__(cola)
+        self.quamtum=4
+    
+    def Ejecutar(self):
+        while len(self.cola.lista)>0:
+            proceso =self.cola.lista.pop(0)
+            while proceso.Get_rafaga()>0 and self.isbloqueado():
+                pass
+        else:
+            pass
 
+            
     def run(self):
         print("hilo command round")
         time.sleep(1)
