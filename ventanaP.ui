@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1548</width>
+    <height>682</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+ 
+	font-family: Comic Sans Ms;
+	background-image:url(:/imagenes/imagenes/HD-wallpaper-abstract-colorful-colors-pattern-thumbnail.jpg);
+}
+
+QPushButton{
+   background:#2d89ef;
+   color: white;
+   border: 2px solid;
+   border-radius:15px;
+   font-size:15px;		
+}
+
+QFrame{
+    /*background: rgb(0, 0, 0) transparent;
+	border:transparent;*/
+}
+
+QTableView {
+    color: white;
+    font-size:14px;
+	background: rgb(59, 89, 213);
+   border: 2px solid;
+   border-radius:15px;
+   
+}
+
+
+QHeaderView{
+  qproperty-defaultAlignment: AlignHCenter;
+  background: rgb(59, 89, 213);
+  font-weight: bold;
+}
+
+QComboBox{
+   background:#2d89ef;
+   color: white;
+   border: 2px solid;
+   border-radius:15px;
+   font-size:15px;		
+}
+
+QLabel{
+	background: rgb(0, 0, 0) transparent;	
+	color:white;
+	font-weight: 900;
+	 font-size:18px;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="boton_bloquear">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>630</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bloquear</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_simular">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>630</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Simular</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_agregarSrt">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>30</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Agregar Cola srt</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>70</y>
+      <width>501</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTableWidget" name="tableWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>501</width>
+       <height>221</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>491</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>1</y>
+       <width>491</width>
+       <height>221</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>300</y>
+      <width>1471</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_4">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>70</y>
+      <width>501</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTableWidget" name="tableWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>501</width>
+       <height>221</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="boton_agregarRound">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>30</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Agregar Cola Round Robin</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_agregarFIFO">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>30</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Agregar Cola FIFO</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections/>
+</ui>
